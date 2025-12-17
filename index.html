@@ -207,5 +207,24 @@ document.addEventListener("DOMContentLoaded", function () {
 })();
 </script>
 
+<script>
+(function () {
+    const audio = document.querySelector(".song-audio-autoplay");
+    let started = false;
+
+    function startAudio() {
+        if (started) return;
+        started = true;
+
+        audio.currentTime = 43; // empezar desde el segundo 43
+        audio.play().catch(() => {});
+    }
+
+    // Primer clic en cualquier parte de la página
+    document.addEventListener("click", startAudio, { once: true });
+
+})();
+</script>
+
 </body>
 </html>
