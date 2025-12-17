@@ -39,8 +39,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const audio = document.querySelector(".song-audio-autoplay");
 
     audio.addEventListener("play", function () {
-        if (audio.currentTime < 37) {
-            audio.currentTime = 37;
+        if (audio.currentTime < 32) {
+            audio.currentTime = 32;
         }
     });
 });
@@ -216,7 +216,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (started) return;
         started = true;
 
-        audio.currentTime = 37; // empezar desde el segundo 43
+        audio.currentTime = 32; // empezar desde el segundo 43
         audio.play().catch(() => {});
     }
 
